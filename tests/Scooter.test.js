@@ -1,6 +1,4 @@
 const Scooter = require('../src/Scooter')
-
-// typeof scooter === object
 describe('scooter object', () => {
   test('Scooter class should create Scooter instance', () => {
     const scooter = new Scooter()
@@ -10,14 +8,15 @@ describe('scooter object', () => {
 
 // Method tests
 describe('scooter methods', () => {
-  // tests here!
 
-  // rent method
-
-  // dock method
-
-  // requestRepair method
-
-  // charge method
-
+it('should rent scooter if not broken and charged', () => {
+  const scooter2 = new Scooter('Station 2');
+  expect(scooter.serial).not.toBe(scooter2.serial);
+})
+it('should dock the scooter at the station', () => {
+  scooter.rent(user);
+  scooter.dock('Station 2');
+  expect(scooter.station).toBe('Station');
+  expect(scooter.user).toBe(null)
+})
 })

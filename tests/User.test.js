@@ -1,4 +1,5 @@
-const User = require('../src/User')
+const User = require('../src/User');
+const ScooterApp = require('../src/ScooterApp');
 
 const user = new User('Joe Bloggs', 'test123', 21)
 
@@ -8,9 +9,16 @@ describe('User property tests', () => {
   test('username should be a string', () => {
     expect(typeof user.username).toBe('string')
   })
-  // test password
+  test('log user with correct password' , () => {
+    user.login('password123');
+    expect(user.password).toBe(true)
+  })
 
-  // test age
+  
+  // test('user should be over 18', () => {
+  //   user.age(21);
+  //   expect()
+  // })
 })
 
 // test login

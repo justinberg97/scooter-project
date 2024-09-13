@@ -9,7 +9,7 @@ constructor(station) {
   this.isBroken = false;
 }
 rent(user) {
-  if (this.chare > 20 && !this.isBroken) {
+  if (this.charge > 20 && !this.isBroken) {
     this.station = null;
     this.user = user;
     console.log('Scooter is rented');
@@ -17,7 +17,7 @@ rent(user) {
     throw new Error('Scooter needs to charge or needs repair')
   }
 }
-dockStation(station) {
+dock(station) {
   if(this.station === null) {
     throw new Error('Scooter is already at station')
   }
