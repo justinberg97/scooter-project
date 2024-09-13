@@ -21,6 +21,7 @@ logout() {
     throw new Error('User is not logged in')
   }
 }
+
 }
 
 module.exports = User
